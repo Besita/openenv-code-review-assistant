@@ -1,0 +1,26 @@
+name: code-review-env
+description: >
+  An OpenEnv environment simulating real-world code review tasks.
+  The agent analyzes code, detects issues, assigns severity, and suggests fixes.
+
+version: 1.0.0
+
+author: Besita Augustin
+
+tasks:
+  - easy
+  - medium
+  - hard
+
+entrypoint: envs/code_review_env.py
+
+models:
+  observation: models.schema.Observation
+  action: models.schema.Action
+  reward: models.schema.Reward
+
+tags:
+  - code-review
+  - llm
+  - static-analysis
+  - openenv
